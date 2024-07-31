@@ -51,6 +51,11 @@ spec:
             - name: root-disk
               disk:
                 bus: virtio
+          inputs:
+            # Required for correct mouse tracking in VNC.
+            - bus: usb
+              name: tablet
+              type: tablet
           interfaces:
             - name: default
               model: virtio
