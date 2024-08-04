@@ -1,13 +1,17 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: win2k22-rdp
+  name: win2k22-service
 spec:
   ports:
-  - nodePort: 32689
+  - name: rdp
     port: 3389
+    nodePort: 32689
     protocol: TCP
-    targetPort: 3389
+  - name: http
+    port: 8000
+    nodePort: 32680
+    protocol: TCP
   selector:
     kubevirt.io/domain: win2k22
   type: NodePort
