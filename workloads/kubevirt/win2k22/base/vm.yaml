@@ -17,6 +17,9 @@ spec:
         kubevirt.io/domain: win2k22
     spec:
       domain:
+        cpu:
+          cores:
+            2
         clock:
           timer:
             hpet:
