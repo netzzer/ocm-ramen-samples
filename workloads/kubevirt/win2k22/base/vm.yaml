@@ -19,9 +19,9 @@ spec:
       domain:
         cpu:
           cores: 4
-           dedicatedCpuPlacement: true
-           maxSockets: 4
-           model: host-model 
+          dedicatedCpuPlacement: true
+          maxSockets: 4
+          model: host-model 
         clock:
           timer:
             hpet:
